@@ -66,6 +66,9 @@ function install_deps() {
   # Install antigen (for easier third-party plugin management than oh-my-zsh) into current dir.
   # We'll symlink later to homedir.
   curl -L git.io/antigen > .antigen.zsh
+
+  echo "\n#### Installing uv ####\n"
+  curl -LsSf https://astral.sh/uv/install.sh | sh
 }
 
 function symlink_dotfiles() {
