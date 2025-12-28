@@ -3,6 +3,7 @@
 {
   // Basic settings
   "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "omnilib.ufmt",
   "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
@@ -34,7 +35,7 @@
     "workbench.action.quickSwitchWindow"
   ],
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "workbench.colorTheme": "GitHub Light",
+  "workbench.colorTheme": "Coldark - Dark",
 
   // Filetype settings
   "[jsonc]": {
@@ -61,6 +62,7 @@
   "todomd.webview.fontSize": "12px",
 
   // Extension settings: Markdown Checkbox
+  "markdown-checkbox.checkmark": "x",
   "markdown-checkbox.dateWhenChecked": false,
   "markdown-checkbox.italicWhenChecked": false,
   "markdown-checkbox.strikeThroughWhenChecked": false,
@@ -174,5 +176,4 @@
     }
   }
 }
-
 
