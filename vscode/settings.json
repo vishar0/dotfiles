@@ -3,7 +3,6 @@
 {
   // Basic settings
   "editor.accessibilitySupport": "off",
-  "editor.defaultFormatter": "omnilib.ufmt",
   "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
@@ -39,19 +38,20 @@
 
   // Filetype settings
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "prettier.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.formatOnSave": true
   },
-
-  // Extension settings: VSCode Neovim
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
   },
-
-  // Extension settings: GitHub Copilot
-  "github.copilot.nextEditSuggestions.enabled": true,
 
   // Extension settings: Todo MD
   "todomd.defaultFile": "/Users/vish/gdrive/zettelkasten/gtd/todo.md",
@@ -176,4 +176,3 @@
     }
   }
 }
-
