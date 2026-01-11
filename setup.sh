@@ -100,6 +100,24 @@ function symlink_dotfiles() {
   done
 }
 
+function install_vscode_extensions() {
+  if command -v code &>/dev/null; then
+    echo "\n#### Installing VSCode extensions ####\n"
+    cat vscode/extensions.txt | xargs -L 1 -I {} code --install-extension {} --force
+  fi
+
+  if command -v cursor &>/dev/null; then
+    echo "\n#### Installing Cursor extensions ####\n"
+    cat vscode/extensions.txt | xargs -L 1 -I {} cursor --install-extension {} --force
+  fi
+
+  if command -v agy &>/dev/null; then
+    echo "\n#### Installing Antigravity extensions ####\n"
+    cat vscode/extensions.txt | xargs -L 1 -I {} agy --install-extension {} --force
+  fi
+}
+
+
 function download_binary() {
   if [ "$#" -lt 1 ]; then
     echo "Usage: ${0} <release_url.tar.gz> [<num_leading_path_elements_to_skip>]"
@@ -117,6 +135,7 @@ function download_binary() {
 git submodule update --init --recursive --remote
 install_deps
 symlink_dotfiles ~  # Symlink dotfiles to homedir
+install_vscode_extensions
 git config --global include.path ~/.delta.gitconfig  # git-delta config
 
 echo "\n#### Done setting up dotfiles! ####\n"
