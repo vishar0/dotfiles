@@ -22,6 +22,7 @@ fi
 ###################################################
 
 export PATH="$PATH:$HOME/bin:$HOME/local/bin:$HOME/.local/bin"
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
