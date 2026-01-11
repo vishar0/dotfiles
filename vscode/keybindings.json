@@ -190,7 +190,7 @@
     "command": "fb-phabricator-diffusion:copyCodeHubFburls"
   },
 
-  // Extension keybindings: Todo MD
+  // Extension: Todo MD
   {
     // shift+cmd+, i (for inbox) to add a new task to todo.md
     "key": "shift+cmd+, i",
@@ -260,14 +260,70 @@
     "when": "editorTextFocus && todomd:isActive"
   },
 
-  // Extension keybindings: Markdown Checkbox
+  // Extension: Markdown Checkbox
   {
     "key": "cmd+, x",
     "command": "markdown-checkbox.markCheckbox",
     "when": "editorTextFocus && resourceLangId == 'markdown' && !todomd:isActive"
+  },
+
+  // Antigravity
+  {
+    // Unbind cmd+l to switch focus to antigravity chat window.
+    // This conflicts with editor navigation and is remapped to shift+cmd+l below.
+    "key": "cmd+l",
+    "command": "-antigravity.prioritized.chat.open",
+    "when": "!terminalFocus"
+  },
+  {
+    // Unbind cmd+l to switch focus to antigravity chat window from terminal.
+    // This is remapped to shift+cmd+l below.
+    "key": "cmd+l",
+    "command": "-antigravity.sendTerminalToChat",
+    "when": "terminalFocus"
+  },
+  {
+    // Unbind shift+cmd+l to open a new antigravity chat.
+    // This is remapped to cmd+, g below.
+    "key": "shift+cmd+l",
+    "command": "-antigravity.prioritized.chat.openNewConversation",
+    "when": "!terminalFocus"
+  },
+  {
+    // Unbind shift+cmd+l to open a new antigravity chat from terminal.
+    // This is remapped to cmd+, g below.
+    "key": "shift+cmd+l",
+    "command": "-antigravity.prioritized.chat.openNewConversationFromTerminal",
+    "when": "terminalFocus"
+  },
+  {
+    // shift+cmd+l to switch focus to antigravity chat window.
+    "key": "shift+cmd+l",
+    "command": "antigravity.prioritized.chat.open",
+    "when": "!terminalFocus"
+  },
+  {
+    // shift+cmd+l to switch focus to antigravity chat window from terminal.
+    "key": "shift+cmd+l",
+    "command": "antigravity.sendTerminalToChat",
+    "when": "terminalFocus"
+  },
+  {
+    // shift+cmd+h to switch focus back from antigravity agent panel to the editor.
+    "key": "shift+cmd+h",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "antigravity.agentPanel.active"
+  },
+  {
+    // cmd+, g to open a new antigravity chat.
+    "key": "cmd+, g",
+    "command": "antigravity.prioritized.chat.openNewConversation",
+    "when": "!terminalFocus"
+  },
+  {
+    // cmd+, g to open a new antigravity chat.
+    "key": "cmd+, g",
+    "command": "antigravity.prioritized.chat.openNewConversationFromTerminal",
+    "when": "terminalFocus"
   }
-  // TODO: f12 stuff - go to def, to to ref, find all ref, etc
-  // TODO: focus on editor after alt+tab workspace switch
 ]
-
-
