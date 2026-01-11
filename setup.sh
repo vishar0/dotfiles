@@ -22,6 +22,13 @@ MAC_DEPS=(
   reattach-to-user-namespace  # tmux access to clipboard: https://blog.carbonfive.com/copying-and-pasting-with-tmux-2-4
 )
 
+LINUX_DEPS=(
+  bat
+  fd-find
+  ripgrep
+  git-delta
+)
+
 BIN_DIR=~/bin
 
 function install_homebrew() {
@@ -42,19 +49,31 @@ function brew_install_or_upgrade() {
   fi
 }
 
-function install_deps() {
+function install_mac_deps() {
   # Install brew dependencies if on mac
   if [ "$(uname -s)" = "Darwin" ]; then
     install_homebrew
 
-    echo "\n#### Installing brew dependencies ####\n"
+    echo "\n#### Installing mac dependencies ####\n"
     brew update || true
     for dep in ${MAC_DEPS}; do
       brew_install_or_upgrade ${dep} || true
     done
     $(brew --prefix)/opt/fzf/install --all || true  # fzf key-bindings and fuzzy completion
   fi
+}
 
+function install_linux_deps() {
+  if [ "$(uname -s)" = "Linux" ]; then
+    echo "\n#### Installing linux dependencies ####\n"
+    sudo apt update
+    for dep in ${LINUX_DEPS}; do
+      sudo apt install ${dep} || true
+    done
+  fi
+}
+
+function install_pip_deps() {
   echo "\n#### Installing pip dependencies ####\n"
   pip3 install --upgrade \
      cpplint \
@@ -67,6 +86,12 @@ function install_deps() {
      tabulate \
      wandb \
      || true
+}
+
+function install_deps() {
+  install_mac_deps
+  install_linux_deps
+  install_pip_deps
 
   echo "\n#### Installing on-my-zsh ####\n"
   # Install oh-my-zsh into current dir. We'll symlink later to homedir.
