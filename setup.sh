@@ -68,7 +68,7 @@ function install_linux_deps() {
     echo "\n#### Installing linux dependencies ####\n"
     sudo apt update
     for dep in ${LINUX_DEPS}; do
-      sudo apt install ${dep} || true
+      sudo apt install -y ${dep} || true
     done
   fi
 }

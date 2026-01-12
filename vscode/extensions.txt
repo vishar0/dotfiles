@@ -1,13 +1,14 @@
 akamud.vscode-theme-onedark
 akamud.vscode-theme-onelight
 armandphilippot.coldark
+asvetliakov.vscode-neovim
 charliermarsh.ruff
 davidanson.vscode-markdownlint
 fabiospampinato.vscode-highlight
 foam.foam-vscode
 github.github-vscode-theme
 google.colab
-kortina.vscode-markdown-notes
+gruntfuggly.todo-tree
 llvm-vs-code-extensions.vscode-clangd
 meta.pyrefly
 ms-python.debugpy
@@ -22,6 +23,5 @@ pkief.markdown-checkbox
 prettier.prettier-vscode
 shd101wyy.markdown-preview-enhanced
 usernamehw.todo-md
-vscodevim.vim
 wbk.datehighlighter
 yzhang.markdown-all-in-one
