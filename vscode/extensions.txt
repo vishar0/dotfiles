@@ -1,5 +1,6 @@
 akamud.vscode-theme-onedark
 akamud.vscode-theme-onelight
+anthropic.claude-code
 armandphilippot.coldark
 asvetliakov.vscode-neovim
 charliermarsh.ruff
@@ -19,9 +20,13 @@ ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
+ms-vscode.remote-explorer
 pkief.markdown-checkbox
 prettier.prettier-vscode
 shd101wyy.markdown-preview-enhanced
 usernamehw.todo-md
 wbk.datehighlighter
 yzhang.markdown-all-in-one
+zhuangtongfa.material-theme
