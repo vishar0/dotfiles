@@ -2,12 +2,11 @@ akamud.vscode-theme-onedark
 akamud.vscode-theme-onelight
 anthropic.claude-code
 armandphilippot.coldark
+asvetliakov.vscode-neovim
 charliermarsh.ruff
 davidanson.vscode-markdownlint
 fabiospampinato.vscode-highlight
 foam.foam-vscode
-github.copilot
-github.copilot-chat
 github.github-vscode-theme
 google.colab
 gruntfuggly.todo-tree
@@ -28,7 +27,6 @@ pkief.markdown-checkbox
 prettier.prettier-vscode
 shd101wyy.markdown-preview-enhanced
 usernamehw.todo-md
-vscodevim.vim
 wbk.datehighlighter
 yzhang.markdown-all-in-one
 zhuangtongfa.material-theme
