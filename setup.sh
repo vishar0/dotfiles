@@ -104,6 +104,9 @@ function install_deps() {
 
   echo "\n#### Installing uv ####\n"
   curl -LsSf https://astral.sh/uv/install.sh | sh
+
+  echo "\n#### Installing claude code ####\n"
+  curl -fsSL https://claude.ai/install.sh | bash
 }
 
 function symlink_dotfiles() {
