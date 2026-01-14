@@ -81,26 +81,13 @@
   {
     "key": "cmd+j",
     "command": "list.focusDown",
-    "when": "inReferenceSearchEditor && neovim.mode == 'normal'"
+    "when": "listFocus && !inputFocus"
   },
   {
     "key": "cmd+k",
     "command": "list.focusUp",
-    "when": "inReferenceSearchEditor && neovim.mode == 'normal'"
+    "when": "listFocus && !inputFocus"
   },
-  // Commenting out the following two for now as it should work with j/k directly
-  // in these context due to neovim plugin.
-  // TODO: cleanup.
-  // {
-  //   "key": "cmd+j",
-  //   "command": "list.focusDown",
-  //   "when": "listFocus && !inputFocus"
-  // },
-  // {
-  //   "key": "cmd+k",
-  //   "command": "list.focusUp",
-  //   "when": "listFocus && !inputFocus"
-  // },
   {
     "key": "cmd+j",
     "command": "workbench.action.quickOpenSelectNext",
