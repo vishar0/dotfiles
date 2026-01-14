@@ -7,6 +7,8 @@ charliermarsh.ruff
 davidanson.vscode-markdownlint
 fabiospampinato.vscode-highlight
 foam.foam-vscode
+github.copilot
+github.copilot-chat
 github.github-vscode-theme
 google.colab
 gruntfuggly.todo-tree
