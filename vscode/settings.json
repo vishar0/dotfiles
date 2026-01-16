@@ -36,35 +36,35 @@
     "-workbench.action.navigateRight",
     // Make VSCode workspace quick switch (alt+tab) skip shell and VSCode directly.
     // Otherwise, alt+tab to rotate through VSCode workspaces doesn't work when terminal is focused.
-    "workbench.action.quickSwitchWindow",
+    "workbench.action.quickSwitchWindow"
   ],
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "workbench.colorTheme": "Coldark - Dark",
+  "workbench.colorTheme": "GitHub Light",
 
   // Filetype settings
   "[jsonc]": {
     "editor.defaultFormatter": "prettier.prettier-vscode",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit",
-      "source.organizeImports": "explicit",
-    },
+      "source.organizeImports": "explicit"
+    }
   },
   "[jupyter]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "notebook.codeActionsOnSave": {
     "notebook.source.fixAll": "explicit",
-    "notebook.source.organizeImports": "explicit",
+    "notebook.source.organizeImports": "explicit"
   },
 
   // Extension: Todo MD
@@ -87,15 +87,22 @@
 
   // Extension: VSCode Neovim
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1,
+    "asvetliakov.vscode-neovim": 1
   },
-
-  // Extension: Todo Tree
-  // Remove [ ] and [x] from the default tags list as those are handled by Highlight below.
-  "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "XXX"],
 
   // Extension: Highlight (fabiospampinato.vscode-highlight)
   "highlight.regexes": {
+    // Code comment tags - TODO
+    "(TODO:?)": {
+      "decorations": [
+        {
+          "overviewRulerColor": "#000fff",
+          "backgroundColor": "#000fff",
+          "color": "#ffffff",
+          "fontWeight": "bold"
+        }
+      ]
+    },
     // Progress patterns - partial completion (e.g., [3/7], [5/10])
     "(\\[\\d+/\\d+\\])": {
       "filterFileRegex": ".*\\.(md|txt)$",
@@ -104,9 +111,9 @@
           "overviewRulerColor": "#ddb026",
           "backgroundColor": "#ddb026",
           "color": "#ffffff",
-          "fontWeight": "bold",
-        },
-      ],
+          "fontWeight": "bold"
+        }
+      ]
     },
     // Progress patterns - exact match/completed (e.g., [7/7], [3/3])
     "(\\[(\\d+)/(\\2)\\])": {
@@ -116,9 +123,9 @@
           "overviewRulerColor": "#298cff",
           "backgroundColor": "#298cff",
           "color": "#ffffff",
-          "fontWeight": "bold",
-        },
-      ],
+          "fontWeight": "bold"
+        }
+      ]
     },
     // Progress patterns - not started (e.g., [0/7], [0/10])
     "(\\[0/\\d+\\])": {
@@ -128,9 +135,9 @@
           "overviewRulerColor": "#6a737b",
           "backgroundColor": "#6a737b",
           "color": "#ffffff",
-          "fontWeight": "bold",
-        },
-      ],
+          "fontWeight": "bold"
+        }
+      ]
     },
     // Markdown checkboxes - completed (e.g., [x], [X])
     "(\\[[xX]\\])": {
@@ -140,9 +147,9 @@
           "overviewRulerColor": "#3a93f8",
           "backgroundColor": "#3a93f8",
           "color": "#ffffff",
-          "fontWeight": "bold",
-        },
-      ],
+          "fontWeight": "bold"
+        }
+      ]
     },
     // Markdown checkboxes - empty/uncompleted (e.g., [ ])
     "(\\[\\s\\])": {
@@ -152,9 +159,9 @@
           "overviewRulerColor": "#6a737b",
           "backgroundColor": "#6a737b",
           "color": "#ffffff",
-          "fontWeight": "bold",
-        },
-      ],
+          "fontWeight": "bold"
+        }
+      ]
     },
     // Recap markers - positive/good (e.g., [+])
     "(\\[\\+\\])": {
@@ -164,9 +171,9 @@
           "overviewRulerColor": "#28a745",
           "backgroundColor": "#28a745",
           "color": "#ffffff",
-          "fontWeight": "bold",
-        },
-      ],
+          "fontWeight": "bold"
+        }
+      ]
     },
     // Recap markers - neutral/okay (e.g., [=])
     "(\\[\\=\\])": {
@@ -176,9 +183,9 @@
           "overviewRulerColor": "#d1c134",
           "backgroundColor": "#d1c134",
           "color": "#ffffff",
-          "fontWeight": "bold",
-        },
-      ],
+          "fontWeight": "bold"
+        }
+      ]
     },
     // Recap markers - negative/bad (e.g., [-])
     "(\\[-\\])": {
@@ -188,10 +195,9 @@
           "overviewRulerColor": "#df3939",
           "backgroundColor": "#df3939",
           "color": "#ffffff",
-          "fontWeight": "bold",
-        },
-      ],
-    },
-  },
+          "fontWeight": "bold"
+        }
+      ]
+    }
+  }
 }
-
