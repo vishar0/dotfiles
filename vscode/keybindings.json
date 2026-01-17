@@ -179,18 +179,16 @@
     "command": "editor.action.openLink",
     "when": "editorTextFocus"
   },
+
+  // Extension: Gitlens (eamodio.gitlens)
   {
-    // VSCode @ Meta: Open CodeHub URL of active file in browser
-    "key": "cmd+, c l",
-    "command": "fb-phabricator-diffusion:openInCodeHub"
-  },
-  {
-    // VSCode @ Meta: Copy CodeHub URL of active file
-    "key": "cmd+, c c",
-    "command": "fb-phabricator-diffusion:copyCodeHubFburls"
+    // Open current file in github
+    "key": "cmd+, g h",
+    "command": "gitlens.openFileOnRemote",
+    "when": "editorTextFocus"
   },
 
-  // Extension: Todo MD
+  // Extension: Todo MD (usernamehw.todo-md)
   {
     // shift+cmd+, i (for inbox) to add a new task to todo.md
     "key": "shift+cmd+, i",
@@ -260,7 +258,7 @@
     "when": "editorTextFocus && todomd:isActive"
   },
 
-  // Extension: Markdown Checkbox
+  // Extension: Markdown Checkbox (pkief.markdown-checkbox)
   {
     "key": "cmd+, x",
     "command": "markdown-checkbox.markCheckbox",
@@ -284,14 +282,14 @@
   },
   {
     // Unbind shift+cmd+l to open a new antigravity chat.
-    // This is remapped to cmd+, g below.
+    // This is remapped to shift+cmd+g below.
     "key": "shift+cmd+l",
     "command": "-antigravity.prioritized.chat.openNewConversation",
     "when": "!terminalFocus"
   },
   {
     // Unbind shift+cmd+l to open a new antigravity chat from terminal.
-    // This is remapped to cmd+, g below.
+    // This is remapped to shift+cmd+g below.
     "key": "shift+cmd+l",
     "command": "-antigravity.prioritized.chat.openNewConversationFromTerminal",
     "when": "terminalFocus"
@@ -315,14 +313,14 @@
     "when": "antigravity.agentPanel.active"
   },
   {
-    // cmd+, g to open a new antigravity chat.
-    "key": "cmd+, g",
+    // shift+cmd+g to open a new antigravity chat.
+    "key": "shift+cmd+g",
     "command": "antigravity.prioritized.chat.openNewConversation",
     "when": "!terminalFocus"
   },
   {
-    // cmd+, g to open a new antigravity chat.
-    "key": "cmd+, g",
+    // shift+cmd+g to open a new antigravity chat from terminal.
+    "key": "shift+cmd+g",
     "command": "antigravity.prioritized.chat.openNewConversationFromTerminal",
     "when": "terminalFocus"
   }

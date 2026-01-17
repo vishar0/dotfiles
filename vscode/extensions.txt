@@ -5,6 +5,7 @@ armandphilippot.coldark
 asvetliakov.vscode-neovim
 charliermarsh.ruff
 davidanson.vscode-markdownlint
+eamodio.gitlens
 fabiospampinato.vscode-highlight
 foam.foam-vscode
 github.copilot

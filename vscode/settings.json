@@ -16,7 +16,6 @@
   "files.insertFinalNewline": false,
   "jupyter.askForKernelRestart": false,
   "notebook.formatOnSave.enabled": true,
-  "python.languageServer": "Default",
   "search.seedOnFocus": true,
   "search.seedWithNearestWord": false,
   "search.showLineNumbers": true,
@@ -84,11 +83,6 @@
   // Extension: Markdown Preview Enhanced (shd101wyy.markdown-preview-enhanced)
   "markdown-preview-enhanced.alwaysShowBacklinksInPreview": true,
   "markdown-preview-enhanced.previewColorScheme": "editorColorScheme",
-
-  // Extension: VSCode Neovim (asvetliakov.vscode-neovim)
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
 
   // Extension: Claude Code (anthropic.claude-code)
   "claudeCode.preferredLocation": "panel",
@@ -202,5 +196,5 @@
         }
       ]
     }
-  }
+  },
 }
