@@ -48,6 +48,19 @@
     "command": "workbench.action.nextEditorInGroup"
   },
 
+  // Chat navigation - prev/next tabs in chat
+  {
+    "key": "cmd+h",
+    "command": "composer.previousChatTab",
+    "when": "composerFocused && !editorTextFocus"
+  },
+  {
+    "key": "cmd+l",
+    "command": "composer.nextChatTab",
+    "when": "composerFocused && !editorTextFocus"
+  },
+
+
   // Pane navigation - left/right panels
   {
     "key": "ctrl+h",
