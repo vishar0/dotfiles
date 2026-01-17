@@ -1,5 +1,3 @@
-// VSCode settings.json to override the defaults.
-// Setup: CommandPalette -> "Open User Settings (JSON)", copy over.
 {
   // Basic settings
   "chat.viewSessions.enabled": false,

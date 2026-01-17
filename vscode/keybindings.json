@@ -1,5 +1,3 @@
-// VSCode keybindings.json to override the defaults.
-// Setup: CommandPalette -> "Open Keyboard Shortcuts (JSON)", copy over.
 [
   // Keymaps for consistency with common shift+cmd+<key> actions
   {

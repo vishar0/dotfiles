@@ -31,6 +31,18 @@ LINUX_DEPS=(
 
 BIN_DIR=~/bin
 
+VSCODE_FORKS=(
+  Code
+  Cursor
+  Antigravity
+)
+
+VSCODE_FORKS_CLI=(
+  code
+  cursor
+  agy
+)
+
 function install_homebrew() {
   if ! command -v brew &>/dev/null; then
     echo "\n#### Installing homebrew ####\n"
@@ -128,21 +140,32 @@ function symlink_dotfiles() {
   done
 }
 
+function symlink_vscode_configs() {
+  if [ "$(uname -s)" = "Darwin" ]; then
+    config_base_dir="${HOME}/Library/Application Support"
+  else
+    config_base_dir="${HOME}/.config"
+  fi
+
+  for editor in "${VSCODE_FORKS[@]}"; do
+    config_dir="${config_base_dir}/${editor}/User"
+    if [ -d "${config_dir}" ]; then
+      echo "\n#### Symlinking ${editor} configs ####\n"
+      echo "Symlink: ${config_dir}/settings.json -> $(pwd)/vscode/settings.json"
+      ln -sf "$(pwd)/vscode/settings.json" "${config_dir}/settings.json"
+      echo "Symlink: ${config_dir}/keybindings.json -> $(pwd)/vscode/keybindings.json"
+      ln -sf "$(pwd)/vscode/keybindings.json" "${config_dir}/keybindings.json"
+    fi
+  done
+}
+
 function install_vscode_extensions() {
-  if command -v code &>/dev/null; then
-    echo "\n#### Installing VSCode extensions ####\n"
-    cat vscode/extensions.txt | xargs -L 1 -I {} code --install-extension {} --force
-  fi
-
-  if command -v cursor &>/dev/null; then
-    echo "\n#### Installing Cursor extensions ####\n"
-    cat vscode/extensions.txt | xargs -L 1 -I {} cursor --install-extension {} --force
-  fi
-
-  if command -v agy &>/dev/null; then
-    echo "\n#### Installing Antigravity extensions ####\n"
-    cat vscode/extensions.txt | xargs -L 1 -I {} agy --install-extension {} --force
-  fi
+  for cli in "${VSCODE_FORKS_CLI[@]}"; do
+    if command -v "${cli}" &>/dev/null; then
+      echo "\n#### Installing ${cli} extensions ####\n"
+      cat vscode/extensions.txt | xargs -L 1 -I {} "${cli}" --install-extension {}
+    fi
+  done
 }
 
 
@@ -163,6 +186,7 @@ function download_binary() {
 git submodule update --init --recursive --remote
 install_deps
 symlink_dotfiles ~  # Symlink dotfiles to homedir
+symlink_vscode_configs
 install_vscode_extensions
 git config --global include.path ~/.delta.gitconfig  # git-delta config
 
