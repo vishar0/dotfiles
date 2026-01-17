@@ -39,7 +39,7 @@
     "workbench.action.quickSwitchWindow"
   ],
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "workbench.colorTheme": "GitHub Light",
+  "workbench.colorTheme": "Coldark - Cold",
 
   // Filetype settings
   "[jsonc]": {
@@ -67,7 +67,7 @@
     "notebook.source.organizeImports": "explicit"
   },
 
-  // Extension: Todo MD
+  // Extension: Todo MD (usernamehw.todo-md)
   "todomd.defaultFile": "/Users/vish/gdrive/zettelkasten/gtd/todo.md",
   "todomd.defaultArchiveFile": "/Users/vish/gdrive/zettelkasten/gtd/todo.archive.md",
   "todomd.defaultSomedayFile": "/Users/vish/gdrive/zettelkasten/gtd/someday.md",
@@ -75,20 +75,23 @@
   "todomd.tabSize": 2,
   "todomd.webview.fontSize": "12px",
 
-  // Extension: Markdown Checkbox
+  // Extension: Markdown Checkbox (pkief.markdown-checkbox)
   "markdown-checkbox.checkmark": "x",
   "markdown-checkbox.dateWhenChecked": false,
   "markdown-checkbox.italicWhenChecked": false,
   "markdown-checkbox.strikeThroughWhenChecked": false,
 
-  // Extension: Markdown Preview Enhanced
+  // Extension: Markdown Preview Enhanced (shd101wyy.markdown-preview-enhanced)
   "markdown-preview-enhanced.alwaysShowBacklinksInPreview": true,
   "markdown-preview-enhanced.previewColorScheme": "editorColorScheme",
 
-  // Extension: VSCode Neovim
+  // Extension: VSCode Neovim (asvetliakov.vscode-neovim)
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
+
+  // Extension: Claude Code (anthropic.claude-code)
+  "claudeCode.preferredLocation": "panel",
 
   // Extension: Highlight (fabiospampinato.vscode-highlight)
   "highlight.regexes": {
