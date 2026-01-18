@@ -188,6 +188,9 @@ install_deps
 symlink_dotfiles ~  # Symlink dotfiles to homedir
 symlink_vscode_configs
 install_vscode_extensions
+
+git config --global user.email vish@flourishlabs.ai
+git config --global user.name "Vish Sivakumar"
 git config --global include.path ~/.delta.gitconfig  # git-delta config
 
 echo "\n#### Done setting up dotfiles! ####\n"
