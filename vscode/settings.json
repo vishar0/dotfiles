@@ -82,9 +82,6 @@
   "markdown-preview-enhanced.alwaysShowBacklinksInPreview": true,
   "markdown-preview-enhanced.previewColorScheme": "editorColorScheme",
 
-  // Extension: Claude Code (anthropic.claude-code)
-  "claudeCode.preferredLocation": "panel",
-
   // Extension: Highlight (fabiospampinato.vscode-highlight)
   "highlight.regexes": {
     // Code comment tags - TODO
