@@ -435,7 +435,6 @@ alias fbc='cd ~/fbsource/fbcode'
 # git
 alias gd='git diff'
 alias gc='git commit -a -v'
-alias ga='git commit -a -v --amend'
 alias gaa='git add --all'
 alias gaad='git add --all --dry-run'
 alias gs='git status'
