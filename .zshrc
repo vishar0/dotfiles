@@ -210,13 +210,13 @@ function fzf-git-branch() {
     fzf --preview 'git log -n 50 --color=always --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed "s/.* //" <<< {})' |
     sed "s/.* //"
 }
-fzf-git-checkout() {
+fzf-git-switch() {
   # Return early if not in a git repo
   in_git_repo || return
 
   # If branch name is provided, no need to invoke `fzf-git-branch`
   if ! [ $# -eq 0 ]; then
-     git checkout "$@"
+     git switch "$@"
      return
    fi
 
@@ -230,11 +230,11 @@ fzf-git-checkout() {
 
   # If branch name starts with 'remotes/' then it is a remote branch. By
   # using --track and a remote branch name, it is the same as:
-  # git checkout -b branchName --track origin/branchName
+  # git switch -c branchName --track origin/branchName
   if [[ "$branch" = 'remotes/'* ]]; then
-      git checkout --track $branch
+      git switch --track $branch
   else
-      git checkout $branch;
+      git switch $branch;
   fi
 }
 
@@ -448,10 +448,11 @@ alias gprom='git pull --rebase origin main'
 alias gprum='git pull --rebase upstream main'
 alias gf='git fetch'
 alias gfo='git fetch origin'
-alias gcb='git checkout -b'
-alias gcm='git checkout $(git_main_branch)'
-has-command fzf && alias gb='fzf-git-branch' || alias gb='git branch -vv'
-has-command fzf && alias gco='fzf-git-checkout' || alias gco='git checkout'
+alias grs='git restore'
+alias gbm='git switch $(git_main_branch)'  # git branch main
+alias gbn='git switch -c'  # git branch new
+has-command fzf && alias gbl='fzf-git-branch' || alias gbl='git branch -vv'  # git branch list
+has-command fzf && alias gb='fzf-git-switch' || alias gb='git switch'  # git branch (switch to existing)
 
 # hg
 alias hd='hg diff'

@@ -33,14 +33,14 @@ BIN_DIR=~/bin
 
 VSCODE_FORKS=(
   Code
-  Cursor
-  Antigravity
+  # Cursor
+  # Antigravity
 )
 
 VSCODE_FORKS_CLI=(
   code
-  cursor
-  agy
+  # cursor
+  # agy
 )
 
 function install_homebrew() {
